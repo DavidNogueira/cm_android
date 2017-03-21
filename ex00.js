@@ -7,9 +7,4 @@ console.log(teste());
 
 
 
-
-balvsdfjgkhjljghfxgdfhjhjkhgfh
-tipo
-
-
-tambem eu
+1
