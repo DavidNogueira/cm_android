@@ -12,6 +12,7 @@ public class AtividadeInicial extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atividade_inicial);
 
+        Toast.makeText(AtividadeInicial.this, getResources().getString(R.string.bemvindo2), Toast.LENGTH_SHORT).show();
         Toast.makeText(AtividadeInicial.this, "onCreate", Toast.LENGTH_SHORT).show();
     }
 
