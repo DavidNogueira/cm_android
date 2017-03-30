@@ -15,9 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Second" android:label="@string/titulo_da_segunda_atividade">
-
-        </activity>
+        <activity
+            android:name=".Second"
+            android:label="@string/titulo_da_segunda_atividade"></activity>
+        <activity
+            android:name=".MainActivity_tabs"
+            android:label="@string/title_activity_main_activity_tabs"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

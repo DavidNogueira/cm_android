@@ -74,6 +74,18 @@ public class AtividadeInicial extends AppCompatActivity {
 
     }
 
+
+    //v3 tutorial 5/6
+    public void botao3(View v){
+        Intent i = new Intent(AtividadeInicial.this, MainActivity_tabs.class);
+
+        startActivity(i);
+
+    }
+
+
+
+
     //v3 tutorial 6
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
