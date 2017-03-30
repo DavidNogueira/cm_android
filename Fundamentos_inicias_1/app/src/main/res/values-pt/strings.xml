@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Fundamentos_inicias_1</string>
+    <string name="titulo_da_segunda_atividade">segunda</string>
     <string name="bemvindo">Bem-vindo</string>
     <string name="bemvindo2">mensagem em portugues</string>
 

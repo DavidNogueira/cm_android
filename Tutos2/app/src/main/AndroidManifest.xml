@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.student.fundamentos_inicias_1">
+    package="com.example.david.tutos2">
 
     <application
         android:allowBackup="true"
@@ -8,16 +8,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AtividadeInicial">
+        <activity android:name=".ActivityMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Second" android:label="@string/titulo_da_segunda_atividade">
 
-        </activity>
     </application>
 
 </manifest>

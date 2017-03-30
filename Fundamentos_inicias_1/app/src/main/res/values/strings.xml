@@ -2,5 +2,11 @@
     <string name="app_name">Fundamentos_inicias_1</string>
     <string name="bemvindo">Welcome</string>
     <string name="bemvindo2">message in english</string>
+    <string name="opcao1">opcao 1</string>
+    <string name="opcao2">opcao 2</string>
+    <string name="opcao3">opcao 3</string>
+    <string name="opcao4">opcao 4</string>
+    <string name="edit">editar</string>
+    <string name="remove">remover</string>
 
 </resources>
