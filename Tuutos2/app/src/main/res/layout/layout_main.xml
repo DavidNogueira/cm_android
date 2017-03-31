@@ -22,4 +22,13 @@
         android:id="@+id/clickbotao"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_below="@+id/clickbotao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
 </RelativeLayout>
