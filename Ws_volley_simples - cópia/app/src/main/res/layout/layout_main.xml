@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.student.ws_volley_simples.MainActivity">
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HTTP GET SINGLE - COM PARAMETROS NA URL (GET)"
+        android:id="@+id/button1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:onClick="clickbotao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HTTP POST - COM PARAMETROS NO CORPO (POST)"
+        android:id="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button1"
+        />
+    <Button
+        android:onClick="clickbotao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HTTP GET ARRAY - COM PARAMETROS NO CORPO (POST)"
+        android:id="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button2"
+
+
+        />
+</RelativeLayout>

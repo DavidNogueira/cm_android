@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DB extends SQLiteOpenHelper{
 
-    public static final int DATABASE_VERSION = 12;
+    public static final int DATABASE_VERSION = 20;
     public static final String DATABASE_NAME = "pessoas.db";
 
     public DB (Context context){
@@ -49,7 +49,10 @@ public class DB extends SQLiteOpenHelper{
         db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (5, 'Estriclapissalandia');");
 
 
-        db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (1, 'David', 78, 2);");
+        db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " ("+Contrato.Pessoa.COLUMN_NOME +","
+                + Contrato.Pessoa.COLUMN_IDADE+","+Contrato.Pessoa.COLUMN_ID_CIDADE+") values ('David', 78, 2);");
+
+        //db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (1, 'David', 78, 2);");
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (2, 'Alexis', 33, 1);");
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (3, 'Renato', 9, 5);");
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (4, 'Picapau Amarelo', 43, 3);");

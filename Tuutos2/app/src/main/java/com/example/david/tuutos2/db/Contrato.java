@@ -27,7 +27,7 @@ public class Contrato {
         public static final String COLUMN_ID_CIDADE = "id_cidade";
 
 
-        public static final String[] PROJECTION ={ Pessoa._ID, Pessoa.COLUMN_NOME, Pessoa.COLUMN_IDADE, Pessoa.COLUMN_ID_CIDADE};
+        public static final String[] PROJECTION ={Pessoa._ID, Pessoa.COLUMN_NOME, Pessoa.COLUMN_IDADE, Pessoa.COLUMN_ID_CIDADE};
 
       //  public static final String[] PROJECTION2 ={Pessoa.COLUMN_NOME, Pessoa.COLUMN_IDADE, Cidade.COLUMN_NOME};
 
@@ -56,15 +56,15 @@ public class Contrato {
 
         public static final String COLUMN_NOME = "nomec";
 
-        public static final String[] PROJECTION ={ Cidade._ID, Cidade.COLUMN_NOME};
+        public static final String[] PROJECTION ={Cidade._ID, Cidade.COLUMN_NOME};
 
         public static final String SQL_CREATE_ENTRIES =
                 "CREATE TABLE "+ Cidade.TABLE_NAME + "("+
                         Cidade._ID + INT_TYPE + " PRIMARY KEY,"+
-                        Cidade.COLUMN_NOME + TEXT_TYPE+");";
+                        Cidade.COLUMN_NOME + TEXT_TYPE + ");";
 
         public static final String SQL_DROP_ENTRIES =
-                "DROP TABLE "+ Cidade.TABLE_NAME+ ";";
+                "DROP TABLE "+ Cidade.TABLE_NAME + ";";
 
     }
 
