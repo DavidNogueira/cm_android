@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/david/Downloads/Ws_volley_simples - cópia/app/libraries/volley/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/david/Downloads/Ws_volley_simples - cópia/app/libraries/volley/src/release/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/alexis/cm_android/Ws_volley_simples - cópia/app/libraries/volley/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/alexis/cm_android/Ws_volley_simples - cópia/app/libraries/volley/src/release/jniLibs"/></dataSet></merger>

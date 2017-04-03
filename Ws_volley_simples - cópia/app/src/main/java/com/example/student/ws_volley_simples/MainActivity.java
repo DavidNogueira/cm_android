@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                            // ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
-                            ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
+                            ((TextView) findViewById(R.id.texto)).setText(response.getString("status"));
 
                         } catch(JSONException ex){}
                     }
