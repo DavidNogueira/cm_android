@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString(Utils.NOME, "Mohamed Balacucoestupido");
         editor.commit();
 
-        //*caso quisecemos ir buscar as shared preferences noutra classe, teriamos que usar a linha(comentada) abixo
+        //*caso quisecemos ir buscar as shared preferences noutra classe, teriamos que usar a linha(comentada) abaixo
         //SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int peso = sharedPref.getInt("peso", 0);
         int idade = sharedPref.getInt("idade", 0);
