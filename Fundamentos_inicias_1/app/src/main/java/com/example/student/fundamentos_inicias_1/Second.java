@@ -86,8 +86,6 @@ public class Second extends AppCompatActivity {
                 new CustomArrayAdapter(this, arrayPessoa);
         ((ListView) findViewById(R.id.lista2)).setAdapter(itemsAdapter2);
 
-
-
     }
 
     //v3 tutorial 10
