@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Escolha extends AppCompatActivity {
+
     public TextView editNome;//iniciamos a textView
     public TextView editPass;//iniciamos a textView
     public String nome;

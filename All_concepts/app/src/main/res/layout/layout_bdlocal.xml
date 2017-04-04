@@ -42,11 +42,13 @@
 
 
             <Button
+                android:onClick="query1"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
             <Button
+                android:onClick="query2"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />

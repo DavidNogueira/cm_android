@@ -23,7 +23,9 @@
         </activity>
         <activity android:name=".Escolha" />
         <activity android:name=".WS" />
-        <activity android:name=".BDLocal"></activity>
+        <activity android:name=".BDLocal" />
+        <activity android:name=".NewInsert" />
+        <activity android:name=".Editar"></activity>
     </application>
 
 </manifest>

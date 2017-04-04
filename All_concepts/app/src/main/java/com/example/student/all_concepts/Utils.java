@@ -16,6 +16,8 @@ public class Utils {
 
     public static final String idade = "idade";
 
+    public static String PARAM_NOME = "nome";
+    public static String PARAM_ID = "id";
 
 
 }
