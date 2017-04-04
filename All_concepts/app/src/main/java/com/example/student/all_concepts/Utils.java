@@ -14,5 +14,8 @@ public class Utils {
     public static final String NOME = "nome";
     public static final String PASS = "pass";
 
+    public static final String idade = "idade";
+
+
 
 }
