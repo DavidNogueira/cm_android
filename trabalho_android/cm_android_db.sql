@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2017 at 01:52 PM
+-- Generation Time: Apr 08, 2017 at 02:32 PM
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -73,13 +73,6 @@ ALTER TABLE `Utilizador`
   ADD PRIMARY KEY (`id_utilizador`);
 
 --
--- Constraints for table `Compradas`
---
-ALTER TABLE `Compradas`
-  ADD CONSTRAINT `compradas_ibfk_1` FOREIGN KEY (`id_senha`) REFERENCES `Ementa` (`id_senha`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `compradas_ibfk_2` FOREIGN KEY (`id_utilizador`) REFERENCES `Utilizador` (`id_utilizador`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -88,3 +81,13 @@ ALTER TABLE `Compradas`
 --
 ALTER TABLE `Ementa`
   MODIFY `id_senha` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Compradas`
+--
+ALTER TABLE `Compradas`
+  ADD CONSTRAINT `compradas_ibfk_1` FOREIGN KEY (`id_senha`) REFERENCES `Ementa` (`id_senha`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compradas_ibfk_2` FOREIGN KEY (`id_utilizador`) REFERENCES `Utilizador` (`id_utilizador`) ON DELETE CASCADE ON UPDATE CASCADE;
