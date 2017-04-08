@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/david/cm_android/Fundamentos_inicias_1/app/build/intermediates/res/merged/debug/menu/menu_cont_1.xml",
+        "source": "/Users/david/cm_android/Fundamentos_inicias_1/app/src/main/res/menu/menu_cont_1.xml"
+    },
+    {
+        "merged": "/Users/david/cm_android/Fundamentos_inicias_1/app/build/intermediates/res/merged/debug/menu/menu_main_activity_tabs.xml",
+        "source": "/Users/david/cm_android/Fundamentos_inicias_1/app/src/main/res/menu/menu_main_activity_tabs.xml"
+    },
+    {
+        "merged": "/Users/david/cm_android/Fundamentos_inicias_1/app/build/intermediates/res/merged/debug/menu/menu_ativ_1.xml",
+        "source": "/Users/david/cm_android/Fundamentos_inicias_1/app/src/main/res/menu/menu_ativ_1.xml"
+    }
+]

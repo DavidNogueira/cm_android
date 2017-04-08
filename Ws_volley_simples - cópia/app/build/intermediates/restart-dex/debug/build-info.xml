@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="420dpi"
+    format="7"
+    timestamp="38345036332614"
+    token="4767504442600008445" >
+
+    <task
+        name="javac"
+        duration="499" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="968" />
+    <task
+        name="verifier"
+        duration="360" />
+
+    <artifact
+        location="/Users/david/Downloads/Ws_volley_simples - cópia/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="38345036332614" >
+        <artifact
+            location="/Users/david/Downloads/Ws_volley_simples - cópia/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

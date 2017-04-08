@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/david/cm_android/All_concepts/app/build/intermediates/res/merged/debug/menu/menu_cont_2.xml",
+        "source": "/Users/david/cm_android/All_concepts/app/src/main/res/menu/menu_cont_2.xml"
+    },
+    {
+        "merged": "/Users/david/cm_android/All_concepts/app/build/intermediates/res/merged/debug/menu/menu_cont_1.xml",
+        "source": "/Users/david/cm_android/All_concepts/app/src/main/res/menu/menu_cont_1.xml"
+    },
+    {
+        "merged": "/Users/david/cm_android/All_concepts/app/build/intermediates/res/merged/debug/menu/menu_ativ_1.xml",
+        "source": "/Users/david/cm_android/All_concepts/app/src/main/res/menu/menu_ativ_1.xml"
+    }
+]
