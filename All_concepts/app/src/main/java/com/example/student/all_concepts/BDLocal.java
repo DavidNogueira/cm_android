@@ -89,8 +89,6 @@ public class BDLocal extends AppCompatActivity {
 
 
 
-
-
     private void preencheListaCostumizada() {
 
 
