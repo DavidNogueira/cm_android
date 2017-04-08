@@ -1,2 +1,0 @@
-CHANGED,/Users/david/cm_android/All_concepts/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/Users/david/cm_android/All_concepts/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/student/all_concepts/BDLocal$override.class
