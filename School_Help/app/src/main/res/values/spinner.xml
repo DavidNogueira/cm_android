@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Curso">
+        <item>Engenharia Informática</item>
+        <item>Engenharia da Computação Gráfica e Multimédia</item>
+        <item>Engenharia Eletrónica e Redes de Computadores</item>
+        <item>Engenharia Mecânica</item>
+        <item>Engenharia Alimentar</item>
+        <item>Engenharia Civil e do Ambiente</item>
+        <item>Gestão</item>
+        <item>Engenharia Sistemas de Energias Renováveis</item>
+        <item>Design do Produto</item>
+        <item>Design de Ambientes</item>
+
+    </string-array>
+
+</resources>

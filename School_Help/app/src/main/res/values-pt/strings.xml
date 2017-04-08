@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<resources>
+
+    <string name="app_name">SH2016</string>
+    <string name="title_activity_tabbed">Tabbed</string>
+    <string name="action_settings">Créditos</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_settings_logout">Sair</string>
+    <string name="find">Encontra-te</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="tem_a_certeza_que_deseja_comprar_esta_senha">Tem a certeza que deseja comprar esta senha?</string>
+    <string name="por_mapas">Por mapas:</string>
+    <string name="por_imagens">Por imagens:</string>
+    <string name="deseja_alterar_o_seu_hor_rio_curso">Deseja alterar o seu horário/curso?</string>
+    <string name="seleccione_o_seu_curso">Seleccione o seu curso:</string>
+    <string name="seguinte">Seguinte</string>
+    <string name="username">Utilizador</string>
+    <string name="password">Palavra-passe</string>
+    <string name="entrar">Entrar</string>
+    <string name="programadores">Os programadores.</string>
+    <string name="saldo_dispon_vel">Saldo Disponível:</string>
+    <string name="quanto_deseja_carregar">Quanto deseja carregar?</string>
+    <string name="segunda">Segunda</string>
+    <string name="ter_a">Terça</string>
+    <string name="quarta">Quarta</string>
+    <string name="quinta">Quinta</string>
+    <string name="sexta">Sexta</string>
+    <string name="o_teu_hor_rio">O Teu Horário</string>
+    <string name="almo_o">Almoço</string>
+    <string name="jantar">Jantar</string>
+    <string name="saldo">Saldo:</string>
+
+
+
+    <string name="seleccione_as_suas_disciplinas">Seleccione as suas disciplinas:</string>
+    <string name="_1_ano">1º Ano</string>
+    <string name="_1_semestre">1º Semestre</string>
+    <string name="an_lise_matem_tica">Análise Matemática</string>
+    <string name="lgebra_linear_e_geometria_anal_tica">Álgebra Linear e Geometria Analítica</string>
+    <string name="arquitetura_e_sistemas_de_computadores">Arquitetura e Sistemas de Computadores</string>
+    <string name="algoritmos_e_estruturas_de_dados">Algoritmos e Estruturas de Dados</string>
+    <string name="matem_tica_discreta_i">Matemática Discreta I</string>
+    <string name="_2_semestre">2º Semestre</string>
+    <string name="matem_tica_discreta_ii">Matemática Discreta II</string>
+    <string name="programa_o_i">Programação I</string>
+    <string name="sistemas_operativos">Sistemas Operativos</string>
+    <string name="estat_stica">Estatística</string>
+    <string name="comportamento_sociedade_e_cidadania_i">Comportamento, Sociedade e Cidadania I</string>
+    <string name="_2_ano">2º Ano</string>
+    <string name="investiga_o_operacional">Investigação Operacional</string>
+    <string name="engenharia_de_software_i">Engenharia de Software I</string>
+    <string name="programa_o_ii">Programação II</string>
+    <string name="base_de_dados">Base de Dados</string>
+    <string name="redes_computadores">Redes Computadores</string>
+    <string name="projeto_i">Projeto I</string>
+    <string name="administra_o_base_de_dados">Administração Base de Dados</string>
+    <string name="tecnologias_multim_dia">Tecnologias Multimédia</string>
+    <string name="intera_o_homem_m_quina">Interação Homem-Máquina</string>
+    <string name="intelig_ncia_artificial">Inteligência Artificial</string>
+    <string name="engenharia_de_software_ii">Engenharia de Software II</string>
+    <string name="projeto_ii">Projeto II</string>
+    <string name="_3_ano">3º Ano</string>
+    <string name="comportamento_sociedade_e_cidadania_ii">Comportamento, Sociedade e Cidadania II</string>
+    <string name="sistemas_de_informa_o_em_rede">Sistemas de Informação em Rede</string>
+    <string name="integra_o_de_sistemas">Integração de Sistemas</string>
+    <string name="op_o_i">Opção I</string>
+    <string name="projecto_iii">Projecto III</string>
+    <string name="comportamento_sociedade_e_cidadania_iii">Comportamento, Sociedade e Cidadania III</string>
+    <string name="computa_o_m_vel">Computação Móvel</string>
+    <string name="seguran_a_de_redes_e_sistemas">Segurança de Redes e Sistemas</string>
+    <string name="op_o_ii">Opção II</string>
+    <string name="projecto_iv">Projecto IV</string>
+    <string name="guardar">Guardar</string>
+
+    <string name="tem_a_certeza_que_deseja_vender_esta_senha">Tem a certeza que deseja vender esta senha?</string>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="420dpi"
+    format="7"
+    timestamp="116515755466991"
+    token="7298497481210010662" >
+
+    <task
+        name="javac"
+        duration="510" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="114" />
+    <task
+        name="verifier"
+        duration="2" />
+
+    <artifact
+        location="/Users/david/cm_android/Nogueira.David/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+        type="DEX" />
+
+    <build timestamp="115276051912435" >
+        <artifact
+            location="/Users/david/cm_android/Nogueira.David/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="115609469042036" >
+        <artifact
+            location="/Users/david/cm_android/Nogueira.David/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="116515755466991" >
+        <artifact
+            location="/Users/david/cm_android/Nogueira.David/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

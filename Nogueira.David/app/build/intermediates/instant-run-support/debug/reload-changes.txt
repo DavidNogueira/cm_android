@@ -1,0 +1,3 @@
+CHANGED,/Users/david/cm_android/Nogueira.David/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/student/nogueiradavid/Atividade4$override.class
+CHANGED,/Users/david/cm_android/Nogueira.David/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/student/nogueiradavid/Actividade3$override.class
+CHANGED,/Users/david/cm_android/Nogueira.David/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class

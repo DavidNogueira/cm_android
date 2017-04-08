@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#b3f7f77e">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deseja_alterar_o_seu_hor_rio_curso"
+        android:id="@+id/textView6"
+        android:textSize="18dp" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmar"
+            android:id="@+id/button4"
+
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/btns"
+android:layout_weight="1"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            android:id="@+id/button5"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/btns"
+            android:layout_weight="1"
+
+            />
+
+
+    </TableRow>
+
+</LinearLayout>
