@@ -1,0 +1,32 @@
+insert into Ementa values (1, 'MOELAS COM ARROZ E BATATAS');
+insert into Ementa values (2, 'JARDINEIRA COM BATATA ESTUFADA');
+insert into Ementa values (3, 'BACALHAU À ZÉ DO PIPO');
+insert into Ementa values (4, 'TRUTA GRELHADA COM LEGUMES');
+insert into Ementa values (5, 'ATUM COM COTOVELINHOS');
+insert into Ementa values (6, 'SALADA DE FRUTOS DO MAR');
+insert into Ementa values (7, 'CROQUETES DE CARNE DE VACA');
+insert into Ementa values (8, 'PANADOS COM ARROZ DE FEIJÃO');
+insert into Ementa values (9, 'CARAPAU COM MOLHO VERDE');
+insert into Ementa values (10, 'PESCADA À ROSA D0 ADRO');
+insert into Ementa values (11, 'CHOP SOI DE FRANGO COM LEGUMES');
+insert into Ementa values (12, 'PESCADA COZIDA COM BATATAS');
+insert into Ementa values (13, 'LOMBO ASSADO COM BATATAS');
+insert into Ementa values (14, 'CARNE DE VACA ESTUFADA');
+insert into Ementa values (15, 'CALDEIRADA DE BACALHAU');
+insert into Ementa values (16, 'EMPADÃO DE BACALHAU');
+insert into Ementa values (17, 'BIFE DE FRANGO GRELHADO');
+insert into Ementa values (18, 'PEITO DE FRANGO COZIDO');
+insert into Ementa values (19, 'PICANHA COM FEIJÃO PRETO');
+insert into Ementa values (20, 'BIFE DE FRANGO COM ESPARGUETE');
+insert into Ementa values (21, 'PEIXE VERMELHO COM BATATA COZIDA');
+insert into Ementa values (22, 'SARDINHA ASSADA NA BRAZA');
+insert into Ementa values (23, 'PEIXE GRELHADO COM LEGUMES');
+insert into Ementa values (24, 'COSTELETA GRELHADA');
+insert into Ementa values (25, 'ETREMEADA COM BATATA FRITA');
+insert into Ementa values (26, 'COSTELETAS DE CEBOLADA');
+insert into Ementa values (27, 'RAPANTE COM ARROZ DE ERVILHAS');
+insert into Ementa values (28, 'BOLINHOS DE BACALHAU');
+insert into Ementa values (29, 'FEVERA GRELHADA COM ARROZ');
+insert into Ementa values (30, 'RISOTTO DE COGUMELOS');
+
+
