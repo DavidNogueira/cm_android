@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Curso">
+        <item>Engenharia Informática</item>
+        <item>Engenharia da Computação Gráfica e Multimédia</item>
+
+
+    </string-array>
+
+</resources>

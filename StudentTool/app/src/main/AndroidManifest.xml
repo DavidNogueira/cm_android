@@ -24,7 +24,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Frag1" />
         <activity android:name=".Frag2" />
-        <activity android:name=".Frag3"></activity>
+        <activity android:name=".Frag3" />
+        <activity android:name=".SelectCourse"></activity>
     </application>
 
 </manifest>

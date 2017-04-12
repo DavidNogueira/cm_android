@@ -1,5 +1,7 @@
 package com.example.student.studenttool;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity_tabs extends AppCompatActivity {
 
@@ -82,6 +85,18 @@ public class MainActivity_tabs extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putInt(Utils.LOGED_IN, 0);
+            editor.commit();
+
+           // android.content.SharedPreferences sharedPref2 = getSharedPreferences(getString(R.string.shared_pref_1),Context.MODE_PRIVATE);
+           // int log = sharedPref2.getInt(Utils.LOGED_IN, 0);
+            //Toast.makeText(MainActivity_tabs.this, Utils.LOGED_IN, Toast.LENGTH_SHORT).show();
+
+
+            finish();
             return true;
         }
 

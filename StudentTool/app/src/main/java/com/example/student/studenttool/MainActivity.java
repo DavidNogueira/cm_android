@@ -37,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
         int log = sharedPref.getInt(Utils.LOGED_IN, 0);
 
         if (log == 1){
-            Intent i = new Intent(MainActivity.this, MainActivity_tabs.class);
+            Intent i = new Intent(MainActivity.this, SelectCourse.class);
             startActivity(i);
+            finish();
         }
 
 
@@ -74,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
                             editor.commit();
 
                             if(response.getString("status").equals("OK")){
-                                Intent i = new Intent(MainActivity.this, MainActivity_tabs.class);
+                                Intent i = new Intent(MainActivity.this, SelectCourse.class);
                                 startActivity(i);
+                                finish();
                             }else{
                                 Toast.makeText(MainActivity.this, "no entry", Toast.LENGTH_SHORT).show();
 
