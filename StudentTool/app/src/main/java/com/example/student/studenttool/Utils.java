@@ -8,9 +8,6 @@ public class Utils {
     public static final String param_email = "email";
     public static final String output_erro = "ERRO";
 
-    public static final String NOME = "nome";
-    public static final String PASS = "pass";
-    public static final String LOGED_IN = "loged_in";
 
 
     public static final String idade = "idade";
@@ -18,5 +15,17 @@ public class Utils {
     public static String PARAM_NOME = "nome";
     public static String PARAM_ID = "id";
 
+
+
+
+
+
+
+
+    public static final String NOME = "nome";
+    public static final String PASS = "pass";
+    public static final String LOGED_IN = "loged_in";
+
+    public static final String CURSO = "curso";
 
 }

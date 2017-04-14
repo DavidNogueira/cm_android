@@ -17,11 +17,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.student.studenttool.db.Contrato;
 import com.example.student.studenttool.db.DB;
 
 import java.util.List;
 
 public class SelectCourse extends FragmentActivity implements AdapterView.OnItemSelectedListener {
+
+
+
+    TextView myTextSelected;
+    int idSelected;
+
 
 
     Spinner spinner;
@@ -66,9 +73,30 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
             @Override
             public void onClick(View v) {
                 finish();
-                //temos que mudar isto
-                        Intent intent = new Intent(v.getContext(), MainActivity_tabs.class);
-                startActivityForResult(intent, 0);
+
+
+
+                String bla = "SELECT "+ Contrato.Curso.TABLE_NAME +"."+ Contrato.Curso._ID +
+                        " FROM "+ Contrato.Curso.TABLE_NAME +
+                        " WHERE " + Contrato.Curso.COLUMN_NOME_CURSO + " = '" + myTextSelected.getText() + "'";
+
+                c = db.rawQuery(bla, null);
+
+                c.moveToPosition(0);
+
+                int idCurso = c.getInt(0);
+
+
+               // int idCurso = c.getInt(c.getColumnIndex(Contrato.Curso._ID));
+
+
+
+
+                Intent i = new Intent(SelectCourse.this, SelectSubjects.class);
+                i.putExtra(Utils.CURSO, idCurso);
+
+                Toast.makeText(SelectCourse.this,  myTextSelected.getText() + " " + idCurso, Toast.LENGTH_SHORT).show();
+                startActivity(i);
 
             }
         });
@@ -84,63 +112,31 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
             }
         });
-
-
-
-        // Log.d("David", "Bem-Vindo");
     }
 
 
 
 
 
-/*
 
-    private void getCursor1() {
-
-        String bla = "SELECT "+ Contrato.Curso.TABLE_NAME +"."+ Contrato.Curso._ID +","+ Contrato.Curso.COLUMN_NOME_CURSO+
-                " FROM "+ Contrato.Curso.TABLE_NAME;
-
-        c = db.rawQuery(bla, null);
-
-
-    }
-
-*/
 
 
 
     private void loadSpinnerData() {//preenche spinner
 
-
-        //getCursor1();
-
-
         DB dbb = new DB(getApplicationContext());
-
         List<String> lables = dbb.getAllLabels();
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, lables);
 
-
-       /* // database handler
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-
-        // Spinner Drop down elements
-        List<String> lables = db.getAllLabels();
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, lables);
-*/
-        // Drop down layout style - list view with radio button
-        dataAdapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
     }
+
+
+
 
 
 
@@ -149,6 +145,8 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText = (TextView) view;
         Toast.makeText(this,"Seleccionas-te " + myText.getText(), Toast.LENGTH_SHORT).show();
+        myTextSelected = (TextView) view;
+
     }
 
     @Override
