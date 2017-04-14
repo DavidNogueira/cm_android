@@ -93,7 +93,9 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
 
                 Intent i = new Intent(SelectCourse.this, SelectSubjects.class);
-                i.putExtra(Utils.CURSO, idCurso);
+
+                String k = String.valueOf(idCurso);
+                i.putExtra(Utils.CURSO, k);
 
                 Toast.makeText(SelectCourse.this,  myTextSelected.getText() + " " + idCurso, Toast.LENGTH_SHORT).show();
                 startActivity(i);
