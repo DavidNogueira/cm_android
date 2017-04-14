@@ -1,14 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#b3f7f77e"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.student.studenttool.Frag3">
+    android:layout_height="match_parent">
 
 
-    <ImageView
+
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        />
+        android:text="Minhas Senha"
+        android:id="@+id/button77"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saldo"
+        android:id="@+id/textView86"
+        android:paddingRight="10dp"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/button77"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        android:id="@+id/textView87"
+        android:paddingRight="5dp"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView88"
+        android:layout_toRightOf="@+id/textView88"
+        android:layout_toEndOf="@+id/textView88" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textView88"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView86"
+        android:layout_toRightOf="@+id/textView86"
+        android:layout_toEndOf="@+id/textView86" />
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button77"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="5"
+        android:id="@+id/linearLayout">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView33"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/almo_o"
+            android:gravity="center"
+            android:id="@+id/textView34"
+            android:layout_weight="2" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jantar"
+            android:gravity="center"
+            android:id="@+id/textView35"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/segunda"
+                    android:id="@+id/textView36"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+                <View android:background="#aaa"
+                    android:layout_width = "2dp"
+                    android:layout_height="fill_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Moelas com arroz e batatas"
+                            android:id="@+id/button1"
+                            android:layout_weight="1"
+                            android:background="#ffff8800" />
+
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jardineira com batata estufada"
+                            android:id="@+id/button2"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bacalhau à Zé do Pipo"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button3" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Truta grelhada com legumes"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button4" />
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Atum com cotovelhinhos"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button5" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Salada de frutos do mar"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button6" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ter_a"
+                    android:id="@+id/textView37"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+                <View android:background="#aaa"
+                    android:layout_width = "2dp"
+                    android:layout_height="fill_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Croquetes de carne de vaca"
+                            android:id="@+id/button7"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Panados com arroz de feijão"
+                            android:id="@+id/button8"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Carapau com molho verde"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button9" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pescada à Rosa do Adro"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button10" />
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chop soi de frango com legumes"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button11" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pescada cozida com batata"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quarta"
+                    android:id="@+id/textView38"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+                <View android:background="#aaa"
+                    android:layout_width = "2dp"
+                    android:layout_height="fill_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lombo assado com batata"
+                            android:id="@+id/button13"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Carne de vaca estufada"
+                            android:id="@+id/button14"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Caldeirada de bacalhau"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button15" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Empadão de bacalhau"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button16" />
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bife de frago grelhado"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button17" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Peito de frando cozido"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button18" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quinta"
+                    android:id="@+id/textView39"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+                <View android:background="#aaa"
+                    android:layout_width = "2dp"
+                    android:layout_height="fill_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Picanha com feijão preto"
+                            android:id="@+id/button19"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bife de frango com esparguete"
+                            android:id="@+id/button20"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Peixe vermelho com batata cozida"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button21" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sardinha assada na brasa"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button22" />
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Peixe grelhado com legumes"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button23" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Costeleta grelhada"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button24" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sexta"
+                    android:id="@+id/textView40"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+                <View android:background="#aaa"
+                    android:layout_width = "2dp"
+                    android:layout_height="fill_parent"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entremeada com batata frita"
+                            android:id="@+id/button25"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Costeletas de cebolada"
+                            android:id="@+id/button26"
+                            android:background="#ffff8800"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rapante com arroz de ervilhas"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button27" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bolinhos de bacalhau"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button28" />
+                    </LinearLayout>
+                    <View android:background="#aaa"
+                        android:layout_width = "fill_parent"
+                        android:layout_height="1dp"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fêvera grelhada com arroz"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button29" />
+                        <View android:background="#aaa"
+                            android:layout_width = "1dp"
+                            android:layout_height="fill_parent"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Risotto de cogumelos"
+                            android:layout_weight="1"
+                            android:background="#ffff8800"
+                            android:id="@+id/button30" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <View android:background="#777"
+                android:layout_width = "fill_parent"
+                android:layout_height="3dp"/>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="   "
+                    android:id="@+id/textView41"
+                    android:rotation="270"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

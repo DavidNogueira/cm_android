@@ -13,4 +13,12 @@
     <string name="cancelar">Cancel</string>
     <string name="seguinte">Next</string>
     <string name="save">SAVE</string>
+    <string name="saldo">Money:</string>
+    <string name="almo_o">Lunch</string>
+    <string name="jantar">Dinner</string>
+    <string name="segunda">Monday</string>
+    <string name="ter_a">Tuesday</string>
+    <string name="quarta">Wednesday</string>
+    <string name="quinta">Thursday</string>
+    <string name="sexta">Friday</string>
 </resources>

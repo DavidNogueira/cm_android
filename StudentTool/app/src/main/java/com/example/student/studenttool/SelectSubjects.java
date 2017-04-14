@@ -1,9 +1,12 @@
 package com.example.student.studenttool;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
@@ -48,6 +51,15 @@ public class SelectSubjects extends AppCompatActivity {
 
     }
 
+    public void itemClicked(View v) {
+        //code to check if this checkbox is checked!
+        CheckBox checkBox = (CheckBox)v;
+        if(checkBox.isChecked()){
+            Toast.makeText(SelectSubjects.this,
+                    "Checked", Toast.LENGTH_LONG).show();
+        }
+    }
+
     private void getCursor1() {
 
 
@@ -72,6 +84,12 @@ public class SelectSubjects extends AppCompatActivity {
 
 
 
+    public void subjectsave(View v){
+
+        Intent i = new Intent(SelectSubjects.this, MainActivity_tabs.class);
+        startActivity(i);
+        finish();
+    }
 
 
 
