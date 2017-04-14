@@ -2,6 +2,7 @@ package com.example.student.studenttool.db;
 
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -10,13 +11,20 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by david on 30/03/17.
  */
 public class DB extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 12;
     public static final String DATABASE_NAME = "cm.db";
+
+    private static final String TABLE_LABELS = "curso";
+
+
 
     public DB (Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -87,7 +95,7 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (46, 'Modelação 3D');");
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (47, 'Sistemas Multimédia');");
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (48, 'Produção Audiovisual');");
-        db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (49, 'Sistemas de Informação Geográficat');");
+        db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (49, 'Sistemas de Informação Geográfica');");
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (50, 'Projecto Web');");
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (51, 'Animação 3D');");
         db.execSQL("insert into " + Contrato.Disciplina.TABLE_NAME + " values (52, 'Pós-Produção Audiovisual');");
@@ -95,72 +103,75 @@ public class DB extends SQLiteOpenHelper {
 
 
         //ASSOCIAÇÕES
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 1, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 2, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 3, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 4, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 5, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 6, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 7, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 8, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 9, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 10, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 11, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 12, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 13, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 14, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 15, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 16, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 17, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 18, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 19, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 20, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 21, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 22, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 23, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 24, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 25, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 26, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 27, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 28, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 29, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 30, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 31, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (1, 32, 0);");
 
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 33, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 2, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 3, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 4, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 34, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 35, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 36, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 7, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 8, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 10, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 37, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 38, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 39, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 13, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 14, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 40, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 41, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 19, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 42, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 43, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 44, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 45, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 24, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 46, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 47, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 48, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 49, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 50, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 51, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 52, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 13, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 52, 0);");
-        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + " values (2, 28, 0);");
+
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 1, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 2, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 3, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 4, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 5, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 6, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 7, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 8, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 9, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 10, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 11, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 12, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 13, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 14, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 15, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 16, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 17, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 18, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 19, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 20, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 21, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 22, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 23, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 24, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 25, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 26, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 27, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 28, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 29, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 30, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 31, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (1, 32, 0);");
+
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 33, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 2, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 3, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 4, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 34, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 35, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 36, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 7, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 8, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 10, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 37, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 38, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 39, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 13, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 14, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 40, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 41, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 19, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 42, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 43, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 44, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 45, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 24, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 46, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 47, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 48, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 49, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 50, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 51, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 18, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 52, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 12, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 53, 0);");
+        db.execSQL("insert into " + Contrato.Associa.TABLE_NAME + "("+Contrato.Associa.COLUMN_ID_CURSO+","+Contrato.Associa.COLUMN_ID_DISCIPLINA+","+Contrato.Associa.COLUMN_CHECK+")  values (2, 28, 0);");
 
 
 
@@ -178,5 +189,30 @@ public class DB extends SQLiteOpenHelper {
         onUpgrade(db, oldVersion, newVersion);
     }
 
+
+    public List<String> getAllLabels(){
+
+        List<String> labels = new ArrayList<String>();
+
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_LABELS;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                labels.add(cursor.getString(1));
+            } while (cursor.moveToNext());
+        }
+
+        // closing connection
+        cursor.close();
+        db.close();
+
+        // returning lables
+        return labels;
+    }
 
 }

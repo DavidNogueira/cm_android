@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         nome = editNome.getText().toString();
         pass = editPass.getText().toString();
-        String url = "http://192.168.0.27:8888/cmlogin.php?nome="+nome+"&pass="+pass+"";
+        String url = "http://192.168.43.132:8888/cmlogin.php?nome="+nome+"&pass="+pass+"";
 
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest

@@ -27,7 +27,7 @@ public class Contrato {
 
         public static final String COLUMN_ID_CURSO = "id_curso";
         public static final String COLUMN_ID_DISCIPLINA = "id_disciplina";
-        public static final String COLUMN_CHECK = "check";
+        public static final String COLUMN_CHECK = "checki";
 
 
         public static final String[] PROJECTION ={Associa._ID, Associa.COLUMN_ID_CURSO,
@@ -36,11 +36,11 @@ public class Contrato {
         public static final String SQL_CREATE_ENTRIES =
                 "CREATE TABLE "+ Associa.TABLE_NAME + "("+
                         Associa._ID + INT_TYPE + ","+
-                        Associa.COLUMN_ID_CURSO + INT_TYPE + " REFERENCES," +
-                        Curso.TABLE_NAME + "("+Curso._ID +") " +
-                        Associa.COLUMN_ID_DISCIPLINA + INT_TYPE + " REFERENCES," +
-                        Disciplina.TABLE_NAME + "("+Disciplina._ID +") " +
-                        Associa.COLUMN_CHECK + INT_TYPE + "" +
+                        Associa.COLUMN_ID_CURSO + INT_TYPE + " REFERENCES " +
+                        Curso.TABLE_NAME + "("+Curso._ID +"), " +
+                        Associa.COLUMN_ID_DISCIPLINA + INT_TYPE + " REFERENCES " +
+                        Disciplina.TABLE_NAME + "("+Disciplina._ID +"), " +
+                        Associa.COLUMN_CHECK + INT_TYPE + ", " +
                         "PRIMARY KEY ("+Associa.COLUMN_ID_CURSO+" , "+Associa.COLUMN_ID_DISCIPLINA+
                         "));";
 

@@ -1,6 +1,8 @@
 package com.example.student.studenttool;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +11,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.student.studenttool.db.DB;
+
+import java.util.List;
 
 public class SelectCourse extends FragmentActivity implements AdapterView.OnItemSelectedListener {
 
@@ -24,6 +32,14 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
     Button ok;
     Button cancela;
 
+
+    DB mDbHelper;
+    SQLiteDatabase db;
+
+    Cursor c, c_pessoas;
+    ListView lista, lista2;
+    SimpleCursorAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +47,17 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
         spinner = (Spinner) findViewById(R.id.spinner);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.Curso,android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
+//possivelmente
+   //     mDbHelper = new DB(SelectCourse.this);
+
+        mDbHelper = new DB(this);
+        db = mDbHelper.getReadableDatabase();//declaração da bd
+
+        loadSpinnerData();
+
+
+        //ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.Curso,android.R.layout.simple_spinner_item);
+        //spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
 
@@ -64,6 +89,60 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
         // Log.d("David", "Bem-Vindo");
     }
+
+
+
+
+
+/*
+
+    private void getCursor1() {
+
+        String bla = "SELECT "+ Contrato.Curso.TABLE_NAME +"."+ Contrato.Curso._ID +","+ Contrato.Curso.COLUMN_NOME_CURSO+
+                " FROM "+ Contrato.Curso.TABLE_NAME;
+
+        c = db.rawQuery(bla, null);
+
+
+    }
+
+*/
+
+
+
+    private void loadSpinnerData() {//preenche spinner
+
+
+        //getCursor1();
+
+
+        DB dbb = new DB(getApplicationContext());
+
+        List<String> lables = dbb.getAllLabels();
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+
+
+       /* // database handler
+        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> lables = db.getAllLabels();
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, lables);
+*/
+        // Drop down layout style - list view with radio button
+        dataAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+    }
+
+
 
 
     @Override
