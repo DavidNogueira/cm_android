@@ -1,11 +1,10 @@
 package com.example.student.studenttool;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ListView;
@@ -17,7 +16,7 @@ import com.example.student.studenttool.adapters.MyCursorAdapter;
 import com.example.student.studenttool.db.Contrato;
 import com.example.student.studenttool.db.DB;
 
-public class SelectSubjects extends AppCompatActivity {
+public class SelectSubjectsTres extends AppCompatActivity {
 
     DB mDbHelper;
     SQLiteDatabase db;
@@ -35,7 +34,7 @@ public class SelectSubjects extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_select_subjects);
+        setContentView(R.layout.layout_select_subjects_tres);
 
 
         //1º
@@ -46,7 +45,7 @@ public class SelectSubjects extends AppCompatActivity {
 
         idDeTras = getIntent().getStringExtra(Utils.CURSO);
 
-        Toast.makeText(SelectSubjects.this,  idDeTras, Toast.LENGTH_SHORT).show();
+        Toast.makeText(SelectSubjectsTres.this,  idDeTras, Toast.LENGTH_SHORT).show();
 
         preencheListaCostumizada();
 
@@ -58,7 +57,7 @@ public class SelectSubjects extends AppCompatActivity {
         //code to check if this checkbox is checked!
         CheckBox checkBox = (CheckBox)v;
         if(checkBox.isChecked()){
-            Toast.makeText(SelectSubjects.this,
+            Toast.makeText(SelectSubjectsTres.this,
                     "Checked", Toast.LENGTH_LONG).show();
         }
     }
@@ -77,7 +76,7 @@ public class SelectSubjects extends AppCompatActivity {
     private void preencheListaCostumizada() {
 
         getCursor1();
-        madapter = new MyCursorAdapter(SelectSubjects.this, c);//é o cursor
+        madapter = new MyCursorAdapter(SelectSubjectsTres.this, c);//é o cursor
         lista.setAdapter(madapter);//vai à lista e preenche-a com  o novo cursor
     }
 
@@ -85,12 +84,9 @@ public class SelectSubjects extends AppCompatActivity {
 
     public void subjectsave(View v){
 
-        Intent i = new Intent(SelectSubjects.this, SelectSubjectsDois.class);
-
-        String k = String.valueOf(idDeTras);
-        i.putExtra(Utils.CURSO, k);
-
+        Intent i = new Intent(SelectSubjectsTres.this, MainActivity_tabs.class);
         startActivity(i);
+        finish();
     }
 
 

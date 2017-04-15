@@ -22,6 +22,10 @@
     <string name="quinta">Thursday</string>
     <string name="sexta">Friday</string>
     <string name="urlmamp">http://192.168.0.78:8888/</string>
+    <string name="thirdyear">3º Year</string>
+    <string name="secondyear">2º Year</string>
+    <string name="firstyear">1º Year</string>
+    <string name="next">NEXT</string>
 
 
 </resources>

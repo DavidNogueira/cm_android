@@ -27,6 +27,8 @@
         <activity android:name=".Frag3" />
         <activity android:name=".SelectCourse" />
         <activity android:name=".SelectSubjects"></activity>
+        <activity android:name=".SelectSubjectsDois"></activity>
+        <activity android:name=".SelectSubjectsTres"></activity>
     </application>
 
 </manifest>
