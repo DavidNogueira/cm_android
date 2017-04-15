@@ -65,10 +65,12 @@ public class SelectSubjectsDois extends AppCompatActivity {
     private void getCursor1() {
 
 
-        String bla = "SELECT "+Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID + ","+ Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_DISCIPLINA +","+  Contrato.Disciplina.COLUMN_NOME_DISCIPLINA +
+        String bla = "SELECT "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_DISCIPLINA +","+  Contrato.Disciplina.COLUMN_NOME_DISCIPLINA + ","+ Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa._ID +
                 " FROM "+ Contrato.Associa.TABLE_NAME + ", " + Contrato.Disciplina.TABLE_NAME +
                 " WHERE " + Contrato.Associa.COLUMN_ID_DISCIPLINA + " = " + Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID +
-                " AND "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_CURSO+" = "+ idDeTras;
+                " AND "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_CURSO+" = "+ idDeTras+
+                " ORDER BY " + Contrato.Associa.TABLE_NAME +"."+ Contrato.Associa._ID +
+                " ASC LIMIT 12 OFFSET 10";
 
         c = db.rawQuery(bla, null);
     }
@@ -88,7 +90,7 @@ public class SelectSubjectsDois extends AppCompatActivity {
 
         String k = String.valueOf(idDeTras);
         i.putExtra(Utils.CURSO, k);
-
+        finish();
         startActivity(i);
     }
 

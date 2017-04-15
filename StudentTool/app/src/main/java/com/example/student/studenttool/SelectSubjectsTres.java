@@ -64,11 +64,24 @@ public class SelectSubjectsTres extends AppCompatActivity {
 
     private void getCursor1() {
 
+        String bla;
 
-        String bla = "SELECT "+Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID + ","+ Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_DISCIPLINA +","+  Contrato.Disciplina.COLUMN_NOME_DISCIPLINA +
-                " FROM "+ Contrato.Associa.TABLE_NAME + ", " + Contrato.Disciplina.TABLE_NAME +
-                " WHERE " + Contrato.Associa.COLUMN_ID_DISCIPLINA + " = " + Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID +
-                " AND "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_CURSO+" = "+ idDeTras;
+        if(idDeTras=="1"){
+            bla = "SELECT "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_DISCIPLINA +","+  Contrato.Disciplina.COLUMN_NOME_DISCIPLINA + ","+ Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa._ID +
+                    " FROM "+ Contrato.Associa.TABLE_NAME + ", " + Contrato.Disciplina.TABLE_NAME +
+                    " WHERE " + Contrato.Associa.COLUMN_ID_DISCIPLINA + " = " + Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID +
+                    " AND "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_CURSO+" = "+ idDeTras+
+                    " ORDER BY " + Contrato.Associa.TABLE_NAME +"."+ Contrato.Associa._ID +
+                    " ASC LIMIT 10 OFFSET 22";
+        }else{
+            bla = "SELECT "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_DISCIPLINA +","+  Contrato.Disciplina.COLUMN_NOME_DISCIPLINA + ","+ Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa._ID +
+                    " FROM "+ Contrato.Associa.TABLE_NAME + ", " + Contrato.Disciplina.TABLE_NAME +
+                    " WHERE " + Contrato.Associa.COLUMN_ID_DISCIPLINA + " = " + Contrato.Disciplina.TABLE_NAME +"."+ Contrato.Disciplina._ID +
+                    " AND "+Contrato.Associa.TABLE_NAME+"."+ Contrato.Associa.COLUMN_ID_CURSO+" = "+ idDeTras+
+                    " ORDER BY " + Contrato.Associa.TABLE_NAME +"."+ Contrato.Associa._ID +
+                    " ASC LIMIT 12 OFFSET 22";
+        }
+
 
         c = db.rawQuery(bla, null);
     }
