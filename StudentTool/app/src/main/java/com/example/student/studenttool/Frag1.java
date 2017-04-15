@@ -11,10 +11,8 @@ import android.widget.TextView;
 
 public class Frag1 extends Fragment {
 
-
     private static final String ARG_SECTION_NUMBER = "section_number";
     public Frag1(){
-
     }
 
     public static Frag1 newInstance(int sectionNumber){

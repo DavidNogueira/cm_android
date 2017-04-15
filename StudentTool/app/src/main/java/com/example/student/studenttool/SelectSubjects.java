@@ -1,5 +1,6 @@
 package com.example.student.studenttool;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -7,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -16,7 +19,10 @@ import com.example.student.studenttool.adapters.MyCursorAdapter;
 import com.example.student.studenttool.db.Contrato;
 import com.example.student.studenttool.db.DB;
 
-public class SelectSubjects extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class SelectSubjects extends Activity implements AdapterView.OnItemClickListener {
 
     DB mDbHelper;
     SQLiteDatabase db;
@@ -28,6 +34,10 @@ public class SelectSubjects extends AppCompatActivity {
 
 
     public String idDeTras;
+
+    ListView listView;
+    ArrayAdapter<Model> adapter;
+    List<Model> list = new ArrayList<Model>();
 
 
 
@@ -75,12 +85,8 @@ public class SelectSubjects extends AppCompatActivity {
 
     private void preencheListaCostumizada() {
 
-
         getCursor1();
-
         madapter = new MyCursorAdapter(SelectSubjects.this, c);//é o cursor
-
-
         lista.setAdapter(madapter);//vai à lista e preenche-a com  o novo cursor
     }
 
@@ -93,7 +99,8 @@ public class SelectSubjects extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
-
+    }
 }

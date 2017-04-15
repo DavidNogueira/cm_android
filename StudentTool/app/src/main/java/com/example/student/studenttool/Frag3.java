@@ -578,10 +578,8 @@ public class Frag3 extends Fragment{
     }
 
 
-
-
     public void atualizaSaldo(String nome){
-        String url = "http://192.168.2.149:8888/cmsaldo.php?nome="+nome+"";
+        String url = getString(R.string.urlmamp)+"cmsaldo.php?nome="+nome+"";
 
         Toast.makeText(getActivity().getApplicationContext(), nome, Toast.LENGTH_SHORT).show();
 
@@ -618,7 +616,7 @@ public class Frag3 extends Fragment{
     public void atualizaEmenta(){
 
 
-        String url = "http://192.168.2.149:8888/cmementa.php";
+        String url = getString(R.string.urlmamp)+"cmementa.php";
 
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest

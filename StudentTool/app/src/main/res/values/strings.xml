@@ -21,4 +21,7 @@
     <string name="quarta">Wednesday</string>
     <string name="quinta">Thursday</string>
     <string name="sexta">Friday</string>
+    <string name="urlmamp">http://192.168.0.78:8888/</string>
+
+
 </resources>
