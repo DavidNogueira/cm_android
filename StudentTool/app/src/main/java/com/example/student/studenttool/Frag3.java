@@ -27,6 +27,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.student.studenttool.entities.Ementa;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -52,7 +53,7 @@ public class Frag3 extends Fragment{
 
     public TextView bla;
 
-
+    public String nome_uti;
 
     Button[] bt = new Button[30];
     int num=0;
@@ -559,23 +560,13 @@ public class Frag3 extends Fragment{
 
 
         //WS
-
         SharedPreferences pref = this.getActivity().getSharedPreferences(getString(R.string.shared_pref_1) ,Context.MODE_PRIVATE);
-
-
-
-        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        //SharedPreferences pref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
-
-        String nome_uti = pref.getString(Utils.NOME, null);
-
+        nome_uti = pref.getString(Utils.NOME, null);
         bla = (TextView) rootView.findViewById(R.id.textView88);
-
         atualizaSaldo(nome_uti);
+       // Toast.makeText(getActivity().getApplicationContext(), Utils.NOME + " " + nome_uti, Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(getActivity().getApplicationContext(), Utils.NOME + " " + nome_uti, Toast.LENGTH_SHORT).show();
-
-
+        atualizaEmenta();
 
 
 
@@ -607,7 +598,6 @@ public class Frag3 extends Fragment{
 
 
 
-
                         } catch(JSONException ex){}
                     }
                 }, new Response.ErrorListener() {
@@ -623,6 +613,63 @@ public class Frag3 extends Fragment{
 
 
 }
+
+
+    public void atualizaEmenta(){
+
+
+        String url = "http://192.168.2.149:8888/cmementa.php";
+
+
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest
+                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+
+
+                            //((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
+                            JSONArray arr = response.getJSONArray(Utils.param_dados);
+
+                            for (int i = 0; i < arr.length(); i++) {
+                                JSONObject obj = arr.getJSONObject(i);
+                                // Toast.makeText(WS.this, obj.getString("nome") + ";" + obj.getString("morada") + ";" + obj.getString("idade"), Toast.LENGTH_SHORT).show();
+
+                               // arrayItems.add(obj.getString("nome"));
+
+                              //  arrayPessoa.add(new Pessoa (obj.getString("nome"), obj.getString("morada"), obj.getInt("idade")));
+
+                                bt[i].setText(obj.getString("nome"));
+
+
+                            }
+
+
+
+
+
+
+                        } catch(JSONException ex){}
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //((TextView) findViewById(R.id.texto)).setText(Utils.output_erro);
+                        Toast.makeText(getActivity().getApplicationContext(), "deu erro", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+        // Access the RequestQueue through your singleton class.
+        MySingleton.getInstance(this.getContext()).addToRequestQueue(jsObjRequest);
+
+
+
+    }
+
+
 
 
 /*

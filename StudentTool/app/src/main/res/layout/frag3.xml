@@ -144,8 +144,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Moelas com arroz e batatas"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button1"
                             android:layout_weight="1"
                             android:background="#ffff8800" />
@@ -155,8 +155,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Jardineira com batata estufada"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button2"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -176,8 +176,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bacalhau à Zé do Pipo"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button3" />
@@ -186,8 +186,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Truta grelhada com legumes"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button4" />
@@ -203,8 +203,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Atum com cotovelhinhos"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button5" />
@@ -213,8 +213,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Salada de frutos do mar"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button6" />
@@ -262,8 +262,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Croquetes de carne de vaca"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button7"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -272,8 +272,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Panados com arroz de feijão"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button8"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -289,8 +289,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Carapau com molho verde"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button9" />
@@ -299,8 +299,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Pescada à Rosa do Adro"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button10" />
@@ -316,8 +316,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Chop soi de frango com legumes"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button11" />
@@ -326,8 +326,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Pescada cozida com batata"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button12" />
@@ -375,8 +375,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lombo assado com batata"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button13"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -385,8 +385,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Carne de vaca estufada"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button14"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -402,8 +402,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Caldeirada de bacalhau"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button15" />
@@ -412,8 +412,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Empadão de bacalhau"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button16" />
@@ -429,8 +429,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bife de frago grelhado"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button17" />
@@ -439,8 +439,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Peito de frando cozido"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button18" />
@@ -487,8 +487,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Picanha com feijão preto"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button19"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -497,8 +497,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bife de frango com esparguete"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button20"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -514,8 +514,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Peixe vermelho com batata cozida"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button21" />
@@ -524,8 +524,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Sardinha assada na brasa"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button22" />
@@ -541,8 +541,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Peixe grelhado com legumes"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button23" />
@@ -551,8 +551,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Costeleta grelhada"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button24" />
@@ -600,8 +600,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Entremeada com batata frita"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button25"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -610,8 +610,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Costeletas de cebolada"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:id="@+id/button26"
                             android:background="#ffff8800"
                             android:layout_weight="1"/>
@@ -627,8 +627,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Rapante com arroz de ervilhas"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button27" />
@@ -637,8 +637,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Bolinhos de bacalhau"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button28" />
@@ -654,8 +654,8 @@
 
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Fêvera grelhada com arroz"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button29" />
@@ -664,8 +664,8 @@
                             android:layout_height="fill_parent"/>
                         <Button
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Risotto de cogumelos"
+                            android:layout_height="match_parent"
+                            android:text="."
                             android:layout_weight="1"
                             android:background="#ffff8800"
                             android:id="@+id/button30" />
