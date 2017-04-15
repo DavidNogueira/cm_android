@@ -2,23 +2,40 @@ package com.example.student.studenttool;
 
 import android.app.Dialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.student.studenttool.entities.Ementa;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Frag3 extends Fragment {
+public class Frag3 extends Fragment{
 
 
     private static final String ARG_SECTION_NUMBER = "section_number";
@@ -32,6 +49,9 @@ public class Frag3 extends Fragment {
     private Double tot2 = 0.0;
     private Button btn;
     private Dialog dialog;
+
+    public TextView bla;
+
 
 
     Button[] bt = new Button[30];
@@ -58,10 +78,6 @@ public class Frag3 extends Fragment {
 
 
         View rootView = inflater.inflate(R.layout.frag3, container, false);
-
-
-
-
 
         bt[0] = (Button)rootView.findViewById(R.id.button1);
         bt[1] = (Button)rootView.findViewById(R.id.button2);
@@ -542,6 +558,26 @@ public class Frag3 extends Fragment {
 
 
 
+        //WS
+
+        SharedPreferences pref = this.getActivity().getSharedPreferences(getString(R.string.shared_pref_1) ,Context.MODE_PRIVATE);
+
+
+
+        //SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        //SharedPreferences pref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
+
+        String nome_uti = pref.getString(Utils.NOME, null);
+
+        bla = (TextView) rootView.findViewById(R.id.textView88);
+
+        atualizaSaldo(nome_uti);
+
+        Toast.makeText(getActivity().getApplicationContext(), Utils.NOME + " " + nome_uti, Toast.LENGTH_SHORT).show();
+
+
+
+
 
 
         // Inflate the layout for this fragment
@@ -550,6 +586,43 @@ public class Frag3 extends Fragment {
 
     }
 
+
+
+
+    public void atualizaSaldo(String nome){
+        String url = "http://192.168.2.149:8888/cmsaldo.php?nome="+nome+"";
+
+        Toast.makeText(getActivity().getApplicationContext(), nome, Toast.LENGTH_SHORT).show();
+
+
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest
+                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            // ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
+                            bla.setText(response.getString("status"));
+                            //Toast.makeText(MainActivity.this, response.getString("status"), Toast.LENGTH_SHORT).show();
+
+
+
+
+                        } catch(JSONException ex){}
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        bla.setText(Utils.output_erro);
+                    }
+                });
+
+        // Access the RequestQueue through your singleton class.
+        MySingleton.getInstance(this.getContext()).addToRequestQueue(jsObjRequest);
+
+
+}
 
 
 /*

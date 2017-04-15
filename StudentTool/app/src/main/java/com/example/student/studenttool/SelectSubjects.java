@@ -1,5 +1,6 @@
 package com.example.student.studenttool;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -47,6 +48,7 @@ public class SelectSubjects extends AppCompatActivity {
         Toast.makeText(SelectSubjects.this,  idDeTras, Toast.LENGTH_SHORT).show();
 
         preencheListaCostumizada();
+
 
 
     }

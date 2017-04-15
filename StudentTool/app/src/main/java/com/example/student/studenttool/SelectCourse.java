@@ -1,5 +1,6 @@
 package com.example.student.studenttool;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -114,6 +115,11 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
             }
         });
+
+
+
+
+
     }
 
 
@@ -153,6 +159,7 @@ public class SelectCourse extends FragmentActivity implements AdapterView.OnItem
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
 
     }
 }
