@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class DB extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 15;
+    public static final int DATABASE_VERSION = 16;
     public static final String DATABASE_NAME = "cm.db";
 
     private static final String TABLE_LABELS = "curso";

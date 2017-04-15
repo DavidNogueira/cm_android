@@ -72,10 +72,15 @@ public class MyCursorAdapter extends CursorAdapter {
 
         ch1.setText(mCursor.getString(cursor.getColumnIndexOrThrow(Contrato.Disciplina.COLUMN_NOME_DISCIPLINA)));
         text2.setText(String.valueOf(mCursor.getString(cursor.getColumnIndexOrThrow(Contrato.Associa.COLUMN_ID_DISCIPLINA))));
+        if(String.valueOf(mCursor.getString(cursor.getColumnIndexOrThrow(Contrato.Associa.COLUMN_CHECK))).equals("1")){
+            ch1.setChecked(true);
+        }else{
+            ch1.setChecked(false);
+        }
 
 
+        //ch1.setChecked(checkbox[position]);
 
-        ch1.setChecked(checkbox[position]);
         ch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override

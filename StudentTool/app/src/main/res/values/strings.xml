@@ -26,6 +26,9 @@
     <string name="secondyear">2º Year</string>
     <string name="firstyear">1º Year</string>
     <string name="next">NEXT</string>
+    <string name="selectsubject">Select your subjects</string>
+    <string name="firstsemester">1º Semester</string>
+    <string name="secondsemester">2º Semester</string>
 
 
 </resources>
