@@ -32,6 +32,9 @@ public class Utils {
     public static final String LAT = "lat";
     public static final String LONG = "long";
 
+    public static final String LATITUDE = "latitude";
+    public static final String LONGITUDE = "longitude";
+
 
 
 

@@ -1,10 +1,12 @@
 package com.example.student.studenttool;
 
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -13,6 +15,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.os.ResultReceiver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.Manifest;
 
@@ -59,6 +63,13 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
     ArrayList<LatLng> pontos;
     private AddressResultReceiver mResultReceiver;
 
+
+    TextView txttempo;
+
+
+    String lati;
+    String longi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,16 +85,41 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
         mapFragment.getMapAsync(this);
         mLocationRequest = new LocationRequest();
         buildGoogleApiClient();
+
+
+        LocationManager myManager;
+        MyLocListener loc;
+        loc = new MyLocListener();
+        myManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        myManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, loc);
+
+
+        android.content.SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1),Context.MODE_PRIVATE);
+         lati = sharedPref.getString(Utils.LATITUDE, "0");
+         longi = sharedPref.getString(Utils.LONGITUDE, "0");
+
+
+
+
         //createGeoFence();
 
+        txttempo = (TextView) findViewById(R.id.txttempo);
 
-
-
-
-        //fazer localização GPS para fazer o
-       // startIntentService();
+        Location l = new Location("");
+        l.setLatitude(Double.parseDouble(lati));
+        l.setLatitude(Double.parseDouble(longi));
+        startIntentService(l);
     }
-
 
 
 
@@ -96,18 +132,29 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
     public void onMapReady(GoogleMap map) {
         mMap = map;
 
-        LatLng pontodestino = new LatLng(41.1, -8.2);
+        Double doublelati = Double.valueOf(lati);
+        Double doublelongi = Double.valueOf(longi);
+
+
+        LatLng pontoorigem = new LatLng(doublelati, doublelongi);
+        LatLng pontodestino = new LatLng(41.702285, -8.818700);
+
+        map.addMarker(new MarkerOptions()
+                .position(pontoorigem)
+                .title("You are HERE"));
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
         map.addMarker(new MarkerOptions()
                 .position(pontodestino)
                 .title("ESTG"));
-        map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         map.setOnMapClickListener(this);
         map.setOnMapLongClickListener(this);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(pontodestino)
-                .zoom(18)
+                .zoom(16)
                 .bearing(45)
                 .tilt(60)
                 .build();
@@ -254,6 +301,8 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
             if (resultData.containsKey(Constants.RESULT_DATA_KEY)) {
                 String mAddressOutput = resultData.getString(Constants.RESULT_DATA_KEY);
                 Toast.makeText(Mapa.this, mAddressOutput, Toast.LENGTH_SHORT).show();
+                txttempo.setText(mAddressOutput);
+
             }
             if (resultData.containsKey(Constants.LATITUDE)) {
                 LatLng l = new LatLng(
@@ -263,5 +312,13 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
                 focusMapa(l);
             }
         }
+    }
+
+
+    public void acaba(View v) {
+
+        Intent i = new Intent(Mapa.this, MainActivity_tabs.class);
+        startActivity(i);
+        finish();
     }
 }
