@@ -26,8 +26,7 @@ public class Frag2 extends Fragment {
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
         View rootView = inflater.inflate(R.layout.frag2, container, false);
-        //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-        //textView.setText("TEXTO DO CRL");
+
         return rootView;
     }
 }

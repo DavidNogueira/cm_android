@@ -142,8 +142,8 @@ public class SelectSubjects extends AppCompatActivity {
 
 
     public void subjectsave(View v){
+       int k;
 
-        int k;
         if(idDeTras.equals("1")){
             k=1;
         }else{
