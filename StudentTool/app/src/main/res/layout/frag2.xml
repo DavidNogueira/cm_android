@@ -18,6 +18,7 @@
 
         <Button
             android:id="@+id/button52"
+            android:onClick="btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GO!" />
@@ -46,6 +47,7 @@
             android:id="@+id/button51"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="btn2"
             android:text="GO!"
             />
 
@@ -72,9 +74,9 @@
             android:text="RESIDENCIA" />
         <Button
             android:id="@+id/button53"
+            android:onClick="btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="GO!" />
 
     </LinearLayout>
