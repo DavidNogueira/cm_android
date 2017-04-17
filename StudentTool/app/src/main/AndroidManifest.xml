@@ -37,7 +37,8 @@
         <activity android:name=".SelectSubjects" />
         <activity android:name=".SelectSubjectsDois" />
         <activity android:name=".SelectSubjectsTres" />
-        <activity android:name=".Mapa"></activity>
+        <activity android:name=".Mapa" />
+        <activity android:name=".MapaRua"></activity>
     </application>
 
 </manifest>

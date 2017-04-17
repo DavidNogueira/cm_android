@@ -33,6 +33,7 @@
     <string name="deseja_alterar_o_seu_hor_rio_curso">Do you want to change your schedule?</string>
     <string name="confirmar">Confirm</string>
     <string name="terminar">Finish</string>
+    <string name="streetinfo">Long Click to see Street View</string>
 
 
 </resources>

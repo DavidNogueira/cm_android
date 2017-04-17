@@ -14,7 +14,7 @@
             android:id="@+id/map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/txttempo" />
+            android:layout_above="@+id/txtrua" />
 
 
 
@@ -25,7 +25,12 @@
         android:layout_alignParentBottom="true"
         android:text="@string/terminar"
         android:id="@+id/terminar"/>
-
+    <TextView
+        android:text="@string/streetinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txttempo"
+        android:id="@+id/txtrua"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
