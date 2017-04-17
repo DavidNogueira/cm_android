@@ -50,7 +50,6 @@ public class SelectSubjectsTres extends AppCompatActivity {
         preencheListaCostumizada();
 
 
-
     }
 
     public void itemClicked(View v) {
@@ -82,7 +81,6 @@ public class SelectSubjectsTres extends AppCompatActivity {
                     " ASC LIMIT 12 OFFSET 22";
         }
 
-
         c = db.rawQuery(bla, null);
     }
 
@@ -93,16 +91,11 @@ public class SelectSubjectsTres extends AppCompatActivity {
         lista.setAdapter(madapter);//vai à lista e preenche-a com  o novo cursor
     }
 
-
-
     public void subjectsave(View v){
 
         Intent i = new Intent(SelectSubjectsTres.this, MainActivity_tabs.class);
         startActivity(i);
         finish();
     }
-
-
-
 
 }

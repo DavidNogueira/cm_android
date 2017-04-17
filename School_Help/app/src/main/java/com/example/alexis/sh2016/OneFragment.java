@@ -103,15 +103,12 @@ public class OneFragment extends Fragment{
 
 
         for(int i = 0; i<32; i++) {
-
             if (getData(i+1).equalsIgnoreCase("0")){
                 bt[i].setVisibility(View.INVISIBLE);
             }
-
             if(getData(i+1).equalsIgnoreCase("1")){
                 bt[i].setVisibility(View.VISIBLE);
             }
-
         }
 
         if(getData(1).equalsIgnoreCase("0")){
