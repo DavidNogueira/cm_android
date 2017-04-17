@@ -34,6 +34,10 @@
     <string name="confirmar">Confirm</string>
     <string name="terminar">Finish</string>
     <string name="streetinfo">Long Click to see Street View</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat and long used</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">Address found</string>
 
 
 </resources>
