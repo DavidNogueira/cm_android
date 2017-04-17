@@ -383,16 +383,138 @@ public class Frag1 extends Fragment {
                 bt[40].setText(nomeDis);
 
             }
+
+            ///----
+
             if(idDis.equals("41")){
-                bt[1].setVisibility(View.VISIBLE);
-                bt[1].setText(nomeDis);
+                bt[5].setVisibility(View.VISIBLE);
+                bt[5].setText(nomeDis);
 
             }
             if(idDis.equals("42")){
+                bt[0].setVisibility(View.VISIBLE);
+                bt[0].setText(nomeDis);
+
+            }
+            if(idDis.equals("43")){
                 bt[1].setVisibility(View.VISIBLE);
                 bt[1].setText(nomeDis);
 
             }
+            if(idDis.equals("43")){
+                bt[18].setVisibility(View.VISIBLE);
+                bt[18].setText(nomeDis);
+
+            }if(idDis.equals("45")){
+                bt[14].setVisibility(View.VISIBLE);
+                bt[14].setText(nomeDis);
+
+            }
+            if(idDis.equals("46")){
+                bt[26].setVisibility(View.VISIBLE);
+                bt[26].setText(nomeDis);
+
+            }if(idDis.equals("47")){
+                bt[1].setVisibility(View.VISIBLE);
+                bt[1].setText(nomeDis);
+
+            }
+            if(idDis.equals("48")){
+                bt[22].setVisibility(View.VISIBLE);
+                bt[22].setText(nomeDis);
+
+            }
+            if(idDis.equals("49")){
+                bt[10].setVisibility(View.VISIBLE);
+                bt[10].setText(nomeDis);
+
+            }
+            if(idDis.equals("50")){
+                bt[20].setVisibility(View.VISIBLE);
+                bt[20].setText(nomeDis);
+
+            }
+            if(idDis.equals("51")){
+                bt[25].setVisibility(View.VISIBLE);
+                bt[25].setText(nomeDis);
+
+            }
+            if(idDis.equals("52")){
+                bt[22].setVisibility(View.VISIBLE);
+                bt[22].setText(nomeDis);
+
+            }
+            if(idDis.equals("53")){
+                bt[6].setVisibility(View.VISIBLE);
+                bt[6].setText(nomeDis);
+
+            }
+            if(idDis.equals("54")){
+                bt[30].setVisibility(View.VISIBLE);
+                bt[30].setText(nomeDis);
+
+            }
+            if(idDis.equals("55")){
+                bt[2].setVisibility(View.VISIBLE);
+                bt[2].setText(nomeDis);
+
+            }
+            if(idDis.equals("56")){
+                bt[17].setVisibility(View.VISIBLE);
+                bt[17].setText(nomeDis);
+
+            }
+            if(idDis.equals("57")){
+                bt[19].setVisibility(View.VISIBLE);
+                bt[19].setText(nomeDis);
+
+            }
+            if(idDis.equals("58")){
+                bt[32].setVisibility(View.VISIBLE);
+                bt[32].setText(nomeDis);
+
+            }
+            if(idDis.equals("59")){
+                bt[12].setVisibility(View.VISIBLE);
+                bt[12].setText(nomeDis);
+
+            }
+            if(idDis.equals("60")){
+                bt[11].setVisibility(View.VISIBLE);
+                bt[11].setText(nomeDis);
+
+            }
+            if(idDis.equals("61")){
+                bt[7].setVisibility(View.VISIBLE);
+                bt[7].setText(nomeDis);
+
+            }
+            if(idDis.equals("62")){
+                bt[33].setVisibility(View.VISIBLE);
+                bt[33].setText(nomeDis);
+
+            }
+            if(idDis.equals("63")){
+                bt[21].setVisibility(View.VISIBLE);
+                bt[21].setText(nomeDis);
+
+            }
+            if(idDis.equals("64")){
+                bt[13].setVisibility(View.VISIBLE);
+                bt[13].setText(nomeDis);
+
+            }
+            if(idDis.equals("65")){
+                bt[8].setVisibility(View.VISIBLE);
+                bt[8].setText(nomeDis);
+
+            }
+            if(idDis.equals("66")){
+                bt[3].setVisibility(View.VISIBLE);
+                bt[3].setText(nomeDis);
+
+            }
+
 
 
 

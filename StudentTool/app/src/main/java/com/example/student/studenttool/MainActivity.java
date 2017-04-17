@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public String nome;
     public String pass;
 
+    public int schedule;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         int log = sharedPref.getInt(Utils.LOGED_IN, 0);
 
         if (log == 1){
-            Intent i = new Intent(MainActivity.this, SelectCourse.class);
+            Intent i = new Intent(MainActivity.this, MainActivity_tabs.class);
             startActivity(i);
             finish();
         }
@@ -65,20 +67,29 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             // ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
                             ((TextView) findViewById(R.id.texto)).setText(response.getString("status"));
-                            Toast.makeText(MainActivity.this, response.getString("status"), Toast.LENGTH_SHORT).show();
-
-                            //SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-                            SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPref.edit();
-                            editor.putInt(Utils.PASS, Integer.parseInt(pass));
-                            editor.putString(Utils.NOME, nome);
-                            editor.putInt(Utils.LOGED_IN, 1);
-                            editor.commit();
+                            //Toast.makeText(MainActivity.this, response.getString("status"), Toast.LENGTH_SHORT).show();
 
                             if(response.getString("status").equals("OK")){
-                                Intent i = new Intent(MainActivity.this, SelectCourse.class);
-                                startActivity(i);
-                                finish();
+                                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putInt(Utils.PASS, Integer.parseInt(pass));
+                                editor.putString(Utils.NOME, nome);
+                                editor.putInt(Utils.LOGED_IN, 1);
+                                editor.commit();
+
+                                schedule = sharedPref.getInt(Utils.SCHEDULE, 0);
+
+                                if(schedule == 0){
+                                    Intent i = new Intent(MainActivity.this, SelectCourse.class);
+                                    startActivity(i);
+                                    finish();
+                                }else{
+                                    Intent i = new Intent(MainActivity.this, MainActivity_tabs.class);
+                                    startActivity(i);
+                                    finish();
+                                }
+
+
                             }else{
                                 Toast.makeText(MainActivity.this, "no entry", Toast.LENGTH_SHORT).show();
 

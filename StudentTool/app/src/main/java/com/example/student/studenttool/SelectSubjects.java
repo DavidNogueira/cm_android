@@ -3,6 +3,7 @@ package com.example.student.studenttool;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -175,6 +176,12 @@ public class SelectSubjects extends AppCompatActivity {
             }
         k=k+1;
         }
+
+
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(Utils.SCHEDULE, 1);
+        editor.commit();
 
 
 

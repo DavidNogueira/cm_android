@@ -25,6 +25,7 @@ public class Utils {
     public static final String NOME = "nome";
     public static final String PASS = "pass";
     public static final String LOGED_IN = "loged_in";
+    public static final String SCHEDULE = "schedule";
 
     public static final String CURSO = "curso";
 
