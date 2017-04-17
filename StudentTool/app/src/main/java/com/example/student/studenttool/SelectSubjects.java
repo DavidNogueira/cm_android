@@ -149,6 +149,11 @@ public class SelectSubjects extends AppCompatActivity {
             k=33;
         }
 
+        for(int i=0; i < 66; i++){
+            ContentValues cv= new ContentValues();
+            cv.put(Contrato.Associa.COLUMN_CHECK, 0);
+            db.update(Contrato.Associa.TABLE_NAME, cv,  Contrato.Associa._ID + " =?", new String[]{i + ""});
+        }
 
         for(int i=0; i < 32; i++){
             if(ch[i].isChecked()){
