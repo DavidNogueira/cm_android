@@ -66,6 +66,7 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
 
     TextView txttempo;
 
+    public int idMapa;
 
     String lati;
     String longi;
@@ -74,6 +75,12 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_mapa);
+
+        android.content.SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1),Context.MODE_PRIVATE);
+
+
+        String valor = sharedPref.getString(Utils.IDMAPA, "0");
+        idMapa = Integer.parseInt(valor);
 
         pontos = new ArrayList();
 
@@ -104,7 +111,6 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
         myManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, loc);
 
 
-        android.content.SharedPreferences sharedPref = getSharedPreferences(getString(R.string.shared_pref_1),Context.MODE_PRIVATE);
          lati = sharedPref.getString(Utils.LATITUDE, "0");
          longi = sharedPref.getString(Utils.LONGITUDE, "0");
 
@@ -131,13 +137,54 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
     @Override
     public void onMapReady(GoogleMap map) {
         mMap = map;
+        LatLng pontodestino;
+        String titulo;
+
+        if (idMapa == 1){
+            pontodestino = new LatLng(41.694504, -8.846884);//ESTG
+            titulo = "ESTG";
+        }else if (idMapa == 2){
+            pontodestino = new LatLng(41.693273, -8.832527);//SA
+            titulo = "SA";
+
+        }else if (idMapa == 3){
+            pontodestino = new LatLng(41.692034, -8.834817);//sedeIPVC
+            titulo = "IPVC";
+
+        }else {
+            pontodestino = new LatLng(0, 0);//ESTG
+            titulo = "0,0";
+
+        }
+
+
+/*
+        switch (idMapa){
+
+            case 1:
+                    pontodestino = new LatLng(41.694504, -8.846884);//ESTG
+                return;
+
+            case 2:
+                    pontodestino = new LatLng(41.693282, -8.8132482);//SA
+                return;
+
+            case 3:
+                    pontodestino = new LatLng(41.692034, -8.834817);//sedeIPVC
+                return;
+
+            default:
+                pontodestino = new LatLng(41.694504, -8.846884);//ESTG
+                return;
+
+
+        }*/
 
         Double doublelati = Double.valueOf(lati);
         Double doublelongi = Double.valueOf(longi);
 
 
         LatLng pontoorigem = new LatLng(doublelati, doublelongi);
-        LatLng pontodestino = new LatLng(41.702285, -8.818700);
 
         map.addMarker(new MarkerOptions()
                 .position(pontoorigem)
@@ -146,7 +193,7 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
 
         map.addMarker(new MarkerOptions()
                 .position(pontodestino)
-                .title("ESTG"));
+                .title(titulo));
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         map.setOnMapClickListener(this);
@@ -160,7 +207,7 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
                 .build();
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-        focusMapa(pontodestino);
+       // focusMapa(pontodestino);
     }
 
     private void focusMapa(LatLng latlng) {
@@ -309,7 +356,7 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
                         resultData.getDouble(Constants.LATITUDE),
                         resultData.getDouble(Constants.LONGITUDE)
                 );
-                focusMapa(l);
+               // focusMapa(l);
             }
         }
     }
@@ -321,4 +368,5 @@ public class Mapa extends AppCompatActivity implements OnMapReadyCallback, Googl
         startActivity(i);
         finish();
     }
+
 }
