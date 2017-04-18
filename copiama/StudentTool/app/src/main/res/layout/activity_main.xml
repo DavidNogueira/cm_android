@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3f7f77e">
+
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appnome"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome"
+        android:id="@+id/nome"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/pass"
+        android:id="@+id/pass"
+
+        />
+    <Button
+        android:onClick="botaologin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/entrar"
+        />
+
+
+
+</LinearLayout>

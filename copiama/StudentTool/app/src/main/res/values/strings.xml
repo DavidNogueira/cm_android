@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">StudentTool</string>
+    <string name="appnome">Student Tool</string>
+    <string name="nome">Name</string>
+    <string name="pass">Password</string>
+    <string name="entrar">Enter</string>
+    <string name="shared_pref_1">sp1</string>
+    <string name="action_settings">Logout</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hello_blank_fragment">Hello Blank fragment</string>
+    <string name="title_activity_main_tabs">MainActivity_tabs</string>
+    <string name="seleccione_o_seu_curso">Select your course</string>
+    <string name="cancelar">Cancel</string>
+    <string name="seguinte">Next</string>
+    <string name="save">SAVE</string>
+    <string name="saldo">Money:</string>
+    <string name="almo_o">Lunch</string>
+    <string name="jantar">Dinner</string>
+    <string name="segunda">Monday</string>
+    <string name="ter_a">Tuesday</string>
+    <string name="quarta">Wednesday</string>
+    <string name="quinta">Thursday</string>
+    <string name="sexta">Friday</string>
+    <string name="urlmamp">http://192.168.1.8:8888/</string>
+    <string name="thirdyear">3º Year</string>
+    <string name="secondyear">2º Year</string>
+    <string name="firstyear">1º Year</string>
+    <string name="next">NEXT</string>
+    <string name="selectsubject">Select your subjects</string>
+    <string name="firstsemester">1º Semester</string>
+    <string name="secondsemester">2º Semester</string>
+    <string name="o_teu_hor_rio">Your schedule</string>
+    <string name="deseja_alterar_o_seu_hor_rio_curso">Do you want to change your schedule?</string>
+    <string name="confirmar">Confirm</string>
+    <string name="terminar">Finish</string>
+    <string name="streetinfo">Long Click to see Street View</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat and long used</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">Address found</string>
+
+
+</resources>
