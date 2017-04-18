@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">StudentTool</string>
+    <string name="appnome">Student Tool</string>
+    <string name="nome">Nome</string>
+    <string name="pass">Palavra-chave</string>
+    <string name="entrar">Entrar</string>
+    <string name="shared_pref_1">sp1</string>
+    <string name="action_settings">Sair</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hello_blank_fragment">Hello Blank fragment</string>
+    <string name="title_activity_main_tabs">MainActivity_tabs</string>
+    <string name="seleccione_o_seu_curso">Seleciona o teu curso</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="seguinte">Seguinte</string>
+    <string name="save">GUARDAR</string>
+    <string name="saldo">Dinheiro:</string>
+    <string name="almo_o">Almoço</string>
+    <string name="jantar">Jantar</string>
+    <string name="segunda">Segunda</string>
+    <string name="ter_a">Terça</string>
+    <string name="quarta">Quarta</string>
+    <string name="quinta">Quinta</string>
+    <string name="sexta">Sexta</string>
+    <string name="urlmamp">http://192.168.43.132:8888/</string>
+    <string name="thirdyear">3º Ano</string>
+    <string name="secondyear">2º Ano</string>
+    <string name="firstyear">1º Ano</string>
+    <string name="next">Seguinte</string>
+    <string name="selectsubject">Seleciona as tuas disciplinas</string>
+    <string name="firstsemester">1º Semestre</string>
+    <string name="secondsemester">2º Semestre</string>
+    <string name="o_teu_hor_rio">O teu horário</string>
+    <string name="deseja_alterar_o_seu_hor_rio_curso">Queres mudar o teu horário?</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="terminar">Terminar</string>
+    <string name="streetinfo">Long Click para ver Street View</string>
+    <string name="service_not_available">Serviço não disponivel</string>
+    <string name="invalid_lat_long_used">Invalido lat e long usedos</string>
+    <string name="no_address_found">Endereço não encontrado</string>
+    <string name="address_found">Endereço encontrado</string>
+
+
+</resources>
