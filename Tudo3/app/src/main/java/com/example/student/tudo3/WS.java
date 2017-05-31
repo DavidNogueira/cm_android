@@ -35,7 +35,16 @@ public class WS extends AppCompatActivity {
 
     ListView lista;
 
+
     public Pessoa p;
+
+
+
+    TextView tex;
+    TextView hex;
+
+    int contagem = 0;
+    int soma = 0;
 
     public ArrayList<String> arrayItems;
     public ArrayList<Pessoa> arrayPessoa;
@@ -50,7 +59,7 @@ public class WS extends AppCompatActivity {
         arrayItems = new ArrayList<>();
         arrayPessoa = new ArrayList<>();
 
-        String url = "http://192.168.1.59:8888/ws_lista.php";
+        String url = "http://192.168.1.8:8888/arrayteste.php";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -60,18 +69,43 @@ public class WS extends AppCompatActivity {
                         try {
 
 
-                            ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
+
+
+
+                             ((TextView) findViewById(R.id.texto)).setText(response.getString(Utils.param_status));
                             JSONArray arr = response.getJSONArray(Utils.param_dados);
 
                             for (int i = 0; i < arr.length(); i++) {
                                 JSONObject obj = arr.getJSONObject(i);
                                // Toast.makeText(WS.this, obj.getString("nome") + ";" + obj.getString("morada") + ";" + obj.getString("idade"), Toast.LENGTH_SHORT).show();
 
-                                arrayItems.add(obj.getString("nome"));
+                                arrayItems.add(obj.getString("cidade"));
 
-                                arrayPessoa.add(new Pessoa (obj.getString("nome"), obj.getString("morada"), obj.getInt("idade")));
+                                arrayPessoa.add(new Pessoa (obj.getString("cidade"), obj.getString("pais"), obj.getInt("habitantes")));
+                                soma = soma + obj.getInt("habitantes");
+
+
+
+
+                                JSONArray arr2 = obj.getJSONArray("monumentos");
+
+
+                                for (int x = 0; x < arr2.length(); x++) {
+
+                                    contagem = contagem + 1;
+                                }
+
+
+
 
                             }
+                            Toast.makeText(WS.this, String.valueOf(soma), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(WS.this, String.valueOf(contagem), Toast.LENGTH_SHORT).show();
+
+                            // Toast.makeText(WS.this, getText(soma), Toast.LENGTH_SHORT).show();
+
+
+                            //) Toast.makeText(WS.this, contagem, Toast.LENGTH_SHORT).show();
 
 
 
@@ -102,8 +136,15 @@ public class WS extends AppCompatActivity {
                 new CustomArrayAdapter(this, arrayPessoa);
         ((ListView) findViewById(R.id.lista2)).setAdapter(itemsAdapter2);
 
+        String som= String.valueOf(soma);
 
+        tex = (TextView) findViewById(R.id.texto2);
+        tex.setText(som);
 
+        som= String.valueOf(contagem);
+
+        hex = (TextView) findViewById(R.id.text3);
+        hex.setText(som);
 
     }
 
@@ -130,7 +171,7 @@ public class WS extends AppCompatActivity {
 
 
 
-                String url = "http://192.168.1.59:8888/ws_idade.php";
+                String url = "http://192.168.1.8:8888/ws_idade.php";
                // String url = "http://ahead.ycorn.pt/saraws/ws2.php";
                 //JSONObject jsonBody = new JSONObject();
 
