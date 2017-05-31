@@ -61,7 +61,7 @@ public class WS extends AppCompatActivity {
 
 
 
-        String url = "http://172.23.197.178:8888/ws_lista.php";
+        String url = "http://192.168.1.59:8888/ws_lista.php";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -141,7 +141,7 @@ public class WS extends AppCompatActivity {
 
 
 
-                String url = "http://172.23.197.178:8888/ws_idade.php";
+                String url = "http://192.168.1.59:8888/ws_idade.php";
                // String url = "http://ahead.ycorn.pt/saraws/ws2.php";
                 //JSONObject jsonBody = new JSONObject();
 

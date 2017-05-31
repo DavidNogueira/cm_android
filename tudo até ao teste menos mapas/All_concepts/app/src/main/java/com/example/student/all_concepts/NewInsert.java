@@ -39,10 +39,6 @@ public class NewInsert extends AppCompatActivity {
         editIdade = (EditText) findViewById(R.id.edit2);//para a pass
         editIdCidade = (EditText) findViewById(R.id.edit3);
 
-
-
-
-
     }
 
     public void botaoinsert(View v) {

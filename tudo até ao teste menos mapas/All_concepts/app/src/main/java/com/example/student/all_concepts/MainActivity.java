@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         nome = editNome.getText().toString();
         pass = editPass.getText().toString();
-        String url = "http://172.23.197.178:8888/wslogin.php?nome="+nome+"&pass="+pass+"";
+        String url = "http://192.168.1.59:8888/wslogin.php?nome="+nome+"&pass="+pass+"";
 
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest

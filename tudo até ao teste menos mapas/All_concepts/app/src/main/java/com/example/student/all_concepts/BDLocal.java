@@ -39,21 +39,18 @@ public class BDLocal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_bdlocal);
 
-        registerForContextMenu((ListView) findViewById(R.id.lista2));
+        registerForContextMenu((ListView) findViewById(R.id.lista2));//registerForContextMenu = long Click no lista2
 
         //1º
         mDbHelper = new DB(this);
         db = mDbHelper.getReadableDatabase();//declaração da bd
 
-        lista = (ListView) findViewById(R.id.lista);
-        lista2 = (ListView) findViewById(R.id.lista2);
-
+        lista = (ListView) findViewById(R.id.lista); //decalração da lista de cima
+        lista2 = (ListView) findViewById(R.id.lista2);//decalração da lista de baixo
 
         //2º preencher as listas
         preencheLista();
         preencheListaCostumizada();
-
-
 
 
     }
@@ -144,35 +141,6 @@ public class BDLocal extends AppCompatActivity {
         lista2.setAdapter(madapter2);//vai à lista e preenche-a com  o novo cursor
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

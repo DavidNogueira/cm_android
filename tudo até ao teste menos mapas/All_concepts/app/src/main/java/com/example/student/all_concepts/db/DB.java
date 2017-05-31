@@ -52,7 +52,11 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (3, 'Monção');");
         db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (4, 'Viana');");
         db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (5, 'Estriclapissalandia');");
-
+        db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (6, 'Zagreb');");
+        db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (7, 'Paris');");
+        db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (8, 'Porto');");
+        db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (9, 'Madrid');");
+        db.execSQL("insert into " + Contrato.Cidade.TABLE_NAME + " values (10, 'Estocolmo');");
 
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " ("+Contrato.Pessoa.COLUMN_NOME +","
                 + Contrato.Pessoa.COLUMN_IDADE+","+Contrato.Pessoa.COLUMN_ID_CIDADE+") values ('David', 78, 2);");
@@ -63,6 +67,9 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (4, 'Picapau Amarelo', 43, 3);");
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (5, 'Prostata na cuecaaaaaaaaa', 12, 2);");
         db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (6, 'Shuarsnegger', 300, 5);");
+        db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (7, 'jessica', 33, 9);");
+        db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (8, 'tone', 9, 10);");
+        db.execSQL("insert into " + Contrato.Pessoa.TABLE_NAME + " values (9, 'Loló', 43, 6);");
 
     }
 

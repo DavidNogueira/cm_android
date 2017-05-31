@@ -47,9 +47,10 @@ public class Editar extends AppCompatActivity {
         editIdCidade = (EditText) findViewById(R.id.edit3);
 
 
-        Toast.makeText(Editar.this,valor, Toast.LENGTH_SHORT).show();
 
         valor = getIntent().getStringExtra(Utils.PARAM_ID);
+
+        Toast.makeText(Editar.this,valor, Toast.LENGTH_SHORT).show();
 
         editId.setText(valor);
 
