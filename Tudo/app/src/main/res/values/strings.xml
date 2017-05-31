@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tudo</string>
+    <string name="appnome">nome</string>
+    <string name="nome">nome</string>
+    <string name="pass">pass</string>
+    <string name="entrar">entrar</string>
+    <string name="shared_pref_1">sp1</string>
+</resources>
