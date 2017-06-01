@@ -4,11 +4,23 @@
         "source": "/Users/david/.android/build-cache/5aad755374d8575dc9bbd6225cf72674ce2cc954/output/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/alexis/cm_android/Nogueira.David/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/alexis/.android/build-cache/3161d68f71559fe4128ed04f87449fb7f79a9ce0/output/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "/Users/david/cm_android/Nogueira.David/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/Users/david/.android/build-cache/5aad755374d8575dc9bbd6225cf72674ce2cc954/output/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/Users/david/cm_android/Nogueira.David/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
         "source": "/Users/david/.android/build-cache/5aad755374d8575dc9bbd6225cf72674ce2cc954/output/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/alexis/cm_android/Nogueira.David/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/alexis/.android/build-cache/3161d68f71559fe4128ed04f87449fb7f79a9ce0/output/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/alexis/cm_android/Nogueira.David/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/alexis/.android/build-cache/3161d68f71559fe4128ed04f87449fb7f79a9ce0/output/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     }
 ]
