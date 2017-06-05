@@ -1,0 +1,4 @@
+#Thu Jun 01 12:16:37 WEST 2017
+base.0=/Users/alexis/cm_android/Nogueira.David/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0
+renamed.0=classes.dex
+file.0=/Users/alexis/cm_android/Nogueira.David/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex
