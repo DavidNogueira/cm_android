@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.student.nogueiradavid.activity4">
+
+    <TextView
+        android:id="@+id/text1"
+        android:text="Descrição"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Descrição"
+        android:id="@+id/edit1"
+        android:layout_below="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:text="Latitude"
+        android:layout_below="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Latitude"
+        android:id="@+id/edit2"
+        android:layout_below="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:text="Longitude"
+        android:layout_below="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="Longitude"
+        android:id="@+id/edit3"
+        android:layout_below="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:id="@+id/text4"
+        android:text="Tipo"
+        android:layout_below="@+id/edit3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="1 ou 2"
+        android:id="@+id/edit4"
+        android:layout_below="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+    <Button
+        android:text="insert"
+        android:layout_below="@+id/edit4"
+        android:onClick="botaoinsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>
